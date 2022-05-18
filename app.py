@@ -11,7 +11,8 @@ def randomCatchall():
     catchall = request.args.get('CATCHALL')
     NAMES = []
     for i in range(int(amount)):
-        NAMES.append(f'{names.get_first_name()}{names.get_last_name()}{random.randint(10,100)}@{catchall}<br>')
+        name = f"{names.get_first_name()}{names.get_last_name()}"
+        NAMES.append(f'{name}:{name}{random.randint(10,100)}@{catchall}<br>')
     return ''.join(NAMES)
 
 
